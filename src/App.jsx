@@ -21,6 +21,12 @@ const App = () => {
     console.log(modeValue)
     setMode(modeValue)
     
+  // Add cats state
+  const [cats, setCats] = useState([
+    {name:'Myshka', breed:'Ragdoll',},
+    {name: 'Malta', breed:'Turkish Angora',},
+  ])
+
   }
   
   return (

@@ -14,19 +14,21 @@ const App = () => {
   
   // Define 'mode' state 
   const [mode, setMode] = useState("light")
-  
+  console.log(mode)
   // Define handler function
 
   const handleMode = (modeValue)=>{
     console.log(modeValue)
     setMode(modeValue)
-    
+  }  
   // Add cats state
   const [cats, setCats] = useState([
-    {name:'Myshka', breed:'Ragdoll',},
-    {name: 'Malta', breed:'Turkish Angora',}
+    {name:'Myshka', breed:'Ragdoll'},
+    {name: 'Malta', breed:'Turkish Angora'},
     ])
-  }
+  
+  console.log(cats, 'Cats State')
+  
   const addCat = (newCat) => {
     console.log('new Cat triggered')
     const newCatsArray = [...cats, newCat]

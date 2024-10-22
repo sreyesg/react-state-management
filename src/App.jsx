@@ -24,28 +24,39 @@ const App = () => {
   // Add cats state
   const [cats, setCats] = useState([
     {name:'Myshka', breed:'Ragdoll',},
-    {name: 'Malta', breed:'Turkish Angora',},
-  ])
-
+    {name: 'Malta', breed:'Turkish Angora',}
+    ])
+  }
+  const addCat = (newCat) => {
+    console.log('new Cat triggered')
+    const newCatsArray = [...cats, newCat]
+    setCats(newCatsArray);
   }
   
   return (
+    // EXAMPLE ONE
+    // <>
+    //   <div className={mode}>
+    //     <h1>Hello world!</h1>
+    //     {/* <p>
+    //       Hello my name is {person.firstName}{person.lastName},
+    //       I am {person.age} years old,
+    //       and {person.hasPets ? 'Have':'Dont have'} pets.
+    //     </p> */}
+    //   </div>
+    //   <div>
+    //     <button onClick={() => handleMode('dark')}>Dark Mode</button>
+    //     <button onClick={() => handleMode('light')}>Light Mode</button>
+    //     <button onClick={() => handleMode('neon')}>neon Mode</button>
+    //     <button onClick={() => handleMode('night')}>night Mode</button>
+    //   </div>
+    // </>  
+    // EXAMPLE TWO: CATS STATE
     <>
-      <div className={mode}>
-        <h1>Hello world!</h1>
-        {/* <p>
-          Hello my name is {person.firstName}{person.lastName},
-          I am {person.age} years old,
-          and {person.hasPets ? 'Have':'Dont have'} pets.
-        </p> */}
-      </div>
-      <div>
-        <button onClick={() => handleMode('dark')}>Dark Mode</button>
-        <button onClick={() => handleMode('light')}>Light Mode</button>
-        <button onClick={() => handleMode('neon')}>neon Mode</button>
-        <button onClick={() => handleMode('night')}>night Mode</button>
-      </div>
-    </>  
+      <button 
+        onClick={() => addCat({name:'Kira', breed: 'Ragamuffin'})}>Add a cat
+      </button>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import {useState} from 'react'
 import './App.css';
 
 const App = () => {
-
+  // Define person state
   // const [person, setUser] = useState({
     //   firstName: 'Mary',
     //   lastName: 'Moon',
@@ -11,11 +11,16 @@ const App = () => {
     //   age: 24
     // })
     // console.log(person)  
+  
+  // Define 'mode' state 
   const [mode, setMode] = useState("light")
+  
+  // Define handler function
+
   const handleMode = (modeValue)=>{
     console.log(modeValue)
     setMode(modeValue)
-    console.log('this is mode', mode)
+    
   }
   
   return (
@@ -31,6 +36,8 @@ const App = () => {
       <div>
         <button onClick={() => handleMode('dark')}>Dark Mode</button>
         <button onClick={() => handleMode('light')}>Light Mode</button>
+        <button onClick={() => handleMode('neon')}>neon Mode</button>
+        <button onClick={() => handleMode('night')}>night Mode</button>
       </div>
     </>  
   );

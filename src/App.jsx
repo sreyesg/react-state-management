@@ -1,10 +1,15 @@
 // src/App.jsx
-
+import {useState} from 'react'
 import './App.css';
 
 const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true)
+  console.log(isDarkMode)
   return (
-    <h1>Hello world!</h1>
+    <div className={isDarkMode ? 'dark':'light'}>
+      <h1>Hello world!</h1>
+      
+    </div>
   );
 };
 
